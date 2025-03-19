@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="../CSS/formAltaConsulta.css">
+<link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
 <form name="formAltaConsulta" method="Post" action="altaConsulta.php" method ="POST">
     <!-- Campo para la pregunta -->
     <label for=""> Pregunta </label>
@@ -14,8 +16,7 @@
         <option value="Compatibilidad"> Compatibilidad </option>
         <option value="Hardware"> Hardware </option>
         <option value="Software"> Software </option>
-    </select>
-
+    </select>   
     <!-- Botón para enviar el formulario -->
     <input type="submit" value="Enviar pregunta">
 </form>
