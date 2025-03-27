@@ -11,4 +11,5 @@ if($stmt->execute([
     }else{
         echo "el Registro se cargo incorrectamente";
     }
-?>
+    echo "<a href='listarConsultas.php'><br> Volver </a>"
+?> 
