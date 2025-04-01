@@ -1,26 +1,29 @@
 <?php 
+//1- conectarnos a la base de datos
 include ("conexion.php");
-
-$sql="SELECT * FROM consultas WEHRE id =(:id)";
+//2-preparar la consulta
+$sql="SELECT * FROM consultas WHERE id =(:id)";
+//3-ejecutar la consulta
 $stmt= $pdo->prepare ($sql);
-if ($stmt-> execute (['id' => $_GET [ 'id'] ])) {
-
+$stmt-> execute (['id' => $_GET [ 'id']]);
+//4-mostrar los datos
+if($consulta = $stmt-> fetch(PDO::FETCH_ASSOC) ){
 
 ?>
-<form name="formEditarConsulta" method="Post" action="editarConsulta.php" method ="POST">   
-    <label for=""> Id </label>
-    <input type="text" name="id" readonly class="" /> <br>
-
+<form name="formEditarConsulta" method="POST" action="editarConsulta.php" method ="POST">   
+    <label for=""> Id: </label>
+    <input type="text" name="id" value="<?=$consulta['id'];?>" readonly class="" /> <br>
     <!-- Campo para la pregunta -->
-    <label for=""> Pregunta </label>
-    <input type="text" name="pregunta" id="pregunta" class="" /> <br>
+    <label for=""> Pregunta: </label>
+    <input type="text" name="pregunta" id="pregunta" value="<?=$consulta['pregunta'];?>" class="" /> <br>
 
     <!-- Campo para la respuesta -->
-    <label for=""> Respuesta </label>
-    <input type="text" name="respuesta" id="respuesta" class="" /> <br>
+    <label for=""> Respuesta: </label>
+    <input type="text" name="respuesta" id="respuesta" value="<?=$consulta['respuesta'];?>" class="" /> <br>
 
     <!-- Menú desplegable para seleccionar la categoría -->
     <select name="categoria" id="categoria">
+        <option value ="<?=$consulta['categoria'];?>" selected> <?=$consulta['categoria'];?></option>   
         <option value="Sistema Operativo"> Sistema Operativo </option>
         <option value="Seguridad"> Seguridad </option>
         <option value="Compatibilidad"> Compatibilidad </option>
@@ -30,6 +33,7 @@ if ($stmt-> execute (['id' => $_GET [ 'id'] ])) {
     <!-- Botón para enviar el formulario -->
     <input type="submit" value="Enviar pregunta">
 </form>
+
 <?php 
 }else{
     echo "el registro seleccionado no existe";

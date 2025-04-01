@@ -13,7 +13,6 @@ try {
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     // Mostramos un mensaje de éxito si la conexión es exitosa
-    echo "Conexión exitosa";
 } catch (PDOException $e) {
     // Si hay un error, lo capturamos y mostramos un mensaje de error
     echo "Error de conexión: " . $e->getMessage();
