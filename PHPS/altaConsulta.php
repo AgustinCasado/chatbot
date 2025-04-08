@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="../CSS/vegebot_style.css">
 <?php 
 include ("conexion.php");
 $sql = "INSERT INTO consultas (pregunta, respuesta, categoria) VALUES (:pregunta,:respuesta,:categoria)";

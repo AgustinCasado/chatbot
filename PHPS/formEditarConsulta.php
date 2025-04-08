@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="../CSS/vegebot_style.css">
 <?php 
 //1- conectarnos a la base de datos
 include ("conexion.php");
@@ -10,7 +11,7 @@ $stmt-> execute (['id' => $_GET [ 'id']]);
 if($consulta = $stmt-> fetch(PDO::FETCH_ASSOC) ){
 
 ?>
-<form name="formEditarConsulta" method="POST" action="editarConsulta.php" method ="POST">   
+<form name="formEditarConsulta" method="POST" action="editarConsulta.php">   
     <label for=""> Id: </label>
     <input type="text" name="id" value="<?=$consulta['id'];?>" readonly class="" /> <br>
     <!-- Campo para la pregunta -->

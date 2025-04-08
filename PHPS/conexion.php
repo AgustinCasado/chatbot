@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="../CSS/vegebot_style.css">
 <?php 
 // Definimos constantes para los datos de conexión
 define("servidor", "localhost");

@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="../CSS/vegebot_style.css">
 <?php 
 //conectamos con la base de datos 
 include ('conexion.php');
@@ -11,6 +12,8 @@ foreach($consultas as $consulta){
     echo "<b>Respuesta</b>".$consulta ['respuesta']."<br/>";;
     echo "<b>Categoria</b>".$consulta ['categoria']. "<br>";
     echo "<a name='actualizar' href='formEditarConsulta.php?id=".$consulta[ 'id']."'> Actualizar </a>";
+    echo  "<br>";
+    echo "<a name='eliminar' href='eliminarConsulta.php?id=".$consulta[ 'id']."'> eliminar </a>";
     echo "<br/><br/>";
 }
 ?>

@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="../CSS/vegebot_style.css">
 <?php 
 include ("conexion.php");
 $sql="DELETE FROM consultas WHERE id = :id";

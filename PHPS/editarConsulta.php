@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="../CSS/vegebot_style.css">
 <?php 
 include ("conexion.php");
 $sql = "UPDATE consultas SET  pregunta = :pregunta,  respuesta = :respuesta,  categoria = :categoria WHERE id = :id";

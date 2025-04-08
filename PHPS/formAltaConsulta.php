@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="../CSS/formAltaConsulta.css">
+<link rel="stylesheet" href="../CSS/vegebot_style.css">
 <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
 <form name="formAltaConsulta" method="Post" action="altaConsulta.php" method ="POST">
     <!-- Campo para la pregunta -->
